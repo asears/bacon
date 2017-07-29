@@ -17,6 +17,8 @@ let Assistant = require('actions-on-google').ApiAiAssistant;
 let express = require('express');
 let bodyParser = require('body-parser');
 let rockPaperScissors = require('./modules/rockPaperScissors');
+let getNewRedditComments = require('./modules/RedditComments');
+let request = require('request')
 //let fs = require('fs');
 
 let app = express();
@@ -40,6 +42,15 @@ app.post('/', function (req, res) {
 //var _ = require("./scrapeSearchSuggestions.js");
 //html = _.scrapeSearchSuggestions("reddit")
 app.use(express.static(__dirname + '/public'));
+
+app.get('/bacon', function(req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  var rCallback= function(data) {
+  console.log('got data: '+data);
+};
+  getNewRedditComments(rCallback);
+  res.end();
+})
 app.get('/', function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.sendfile("public/index.html");//res.write(html);
