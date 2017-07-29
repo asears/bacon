@@ -28,10 +28,13 @@ app.post('/', function (req, res) {
 
   // Fulfill action logic
   function responseHandler (assistant) {
-    if(Math.random()>=0.5)
-      assistant.tell('Daddy!');
+    var rnd = Math.random();
+    if(rnd>=0.75)
+      assistant.tell('Rock');
+    else if (rnd>= 0.5 && rnd <0.75)
+      assistant.tell('Paper');
     else
-      assistant.tell('Chips!');
+      assistant.tell('Scissors');
   }
 
   assistant.handleRequest(responseHandler);
@@ -39,9 +42,12 @@ app.post('/', function (req, res) {
 // [END Action]
 
 // Renders the homepage
+var html = '<html><head><title>Rock Paper Scissors</title></head><body><h1>Rock, Paper or Scissors?  You know the drill...</p><iframe width="350" height="430" src="https://console.api.ai/api-client/demo/embedded/2378fb5f-4ade-47c9-8411-5b3806ff1659"></iframe></div><script src="https://button.glitch.me/button.js" data-style="glitch"></script><div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div></body></html>';
+//var _ = require("./scrapeSearchSuggestions.js");
+//html = _.scrapeSearchSuggestions("reddit")
 app.get('/', function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write('<html><head><title>Google Home Agent</title></head><body><h1>Google Home Agent Example</h1><div><p>Ah, the age-old question - which is better, Daddy or Chips? Google Home will tell you. Type or ask "daddy or chips?"</p><iframe width="350" height="430" src="https://console.api.ai/api-client/demo/embedded/62da6a94-0ac9-4640-bd99-bc456c58064b"></iframe></div><script src="https://button.glitch.me/button.js" data-style="glitch"></script><div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div></body></html>');
+  res.write(html);
   res.end();
 });
 
