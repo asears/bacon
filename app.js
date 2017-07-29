@@ -40,6 +40,9 @@ app.post('/', function (req, res) {
 //var _ = require("./scrapeSearchSuggestions.js");
 //html = _.scrapeSearchSuggestions("reddit")
 app.use(express.static(__dirname + '/public'));
+app.get('/privacy',express.static(__dirname + '/public/privacy.html'));
+app.get('/toc',express.static(__dirname + '/public/toc.html'));
+
 app.get('/', function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.sendfile("public/index.html");//res.write(html);
