@@ -1,8 +1,6 @@
-# Daddy or Chips? Google Home Action
+# Rock Paper Scissors
+I'm modifying the *Daddy or Chips? Google Home Action* example from Glitch to play Rock Paper Scissors.
 
-Truly a question for the ages... since time immemorial people have wondered, which is better - Daddy or Chips?
-
-Now Google Home will tell you, and provide a useful starting point for building your own Google Home agents using Webhooks with API.ai on Glitch.
 
 It's based on Google's example [API.AI Webhook Template for Actions](https://github.com/actions-on-google/apiai-webhook-template-nodejs) project.
 
