@@ -1,0 +1,38 @@
+{
+  "userSays": [
+    {
+      "id": "a093408a-0ef3-49bc-9ede-ab55f543f84c",
+      "data": [
+        {
+          "text": "When does the narwhal bacon?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "12688d81-a27e-4141-9108-e84d00ed5357",
+  "name": "narwhalbacon",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "reply",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "The narwhal bacons at midnight you silly redditor."
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

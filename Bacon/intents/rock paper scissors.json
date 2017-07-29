@@ -1,0 +1,38 @@
+{
+  "userSays": [
+    {
+      "id": "a81a46a8-6d79-40a6-926c-7682d812d737",
+      "data": [
+        {
+          "text": "rock paper scissors"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "a955448e-0e9a-4a6c-be2c-cbb311fdb344",
+  "name": "rock paper scissors",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "rockpaperscissors",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

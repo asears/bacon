@@ -1,0 +1,99 @@
+{
+  "userSays": [
+    {
+      "id": "c149023e-2a98-45c5-a573-181027aa9ee8",
+      "data": [
+        {
+          "text": "read the previous results"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ce334fa1-a54e-4167-9023-f051b9a3ec80",
+      "data": [
+        {
+          "text": "show the previous results"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "035a602e-6068-4862-aa43-b72a3bcbc042",
+      "data": [
+        {
+          "text": "switch to the previous"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7d055b9e-797e-4ec3-af3d-5e4d80dd57a0",
+      "data": [
+        {
+          "text": "previous results"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4ff1b462-f37e-41f3-9a7f-acb19b03a482",
+      "data": [
+        {
+          "text": "previous page"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3f7452b9-4317-4cb4-b159-752477220f13",
+      "data": [
+        {
+          "text": "go back"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d7cd9cc9-29d6-45be-9611-b66b7da0b135",
+      "data": [
+        {
+          "text": "previous"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "66bc4b5e-bea3-4bf1-8ecd-733a2efedee3",
+  "name": "navigation.previous",
+  "auto": true,
+  "contexts": [
+    "news"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "navigation.previous",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

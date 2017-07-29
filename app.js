@@ -12,13 +12,18 @@
 // limitations under the License.
 
 'use strict';
-
 process.env.DEBUG = 'actions-on-google:*';
 let Assistant = require('actions-on-google').ApiAiAssistant;
 let express = require('express');
 let bodyParser = require('body-parser');
+let rockPaperScissors = require('./modules/rockPaperScissors');
+//let fs = require('fs');
 
 let app = express();
+
+global.__base = __dirname + '/';
+
+
 app.use(bodyParser.json({type: 'application/json'}));
 
 // [START Action]
@@ -26,28 +31,18 @@ app.post('/', function (req, res) {
   const assistant = new Assistant({request: req, response: res});
   console.log('Request received: ' + JSON.stringify(req.body));
 
-  // Fulfill action logic
-  function responseHandler (assistant) {
-    var rnd = Math.random();
-    if(rnd>=0.75)
-      assistant.tell('Rock');
-    else if (rnd>= 0.5 && rnd <0.75)
-      assistant.tell('Paper');
-    else
-      assistant.tell('Scissors');
-  }
-
-  assistant.handleRequest(responseHandler);
+  assistant.handleRequest(rockPaperScissors.rockPaperScissors);
 });
 // [END Action]
 
 // Renders the homepage
-var html = '<html><head><title>Rock Paper Scissors</title></head><body><h1>Rock, Paper or Scissors?  You know the drill...</p><iframe width="350" height="430" src="https://console.api.ai/api-client/demo/embedded/2378fb5f-4ade-47c9-8411-5b3806ff1659"></iframe></div><script src="https://button.glitch.me/button.js" data-style="glitch"></script><div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div></body></html>';
+//var html = '<html><head><title>Rock Paper Scissors</title></head><body><h1>Rock, Paper or Scissors?  You know the drill...</p><iframe width="350" height="430" src="https://console.api.ai/api-client/demo/embedded/2378fb5f-4ade-47c9-8411-5b3806ff1659"></iframe></div><script src="https://button.glitch.me/button.js" data-style="glitch"></script><div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div></body></html>';
 //var _ = require("./scrapeSearchSuggestions.js");
 //html = _.scrapeSearchSuggestions("reddit")
+app.use(express.static(__dirname + '/public'));
 app.get('/', function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write(html);
+  res.sendfile("public/index.html");//res.write(html);
   res.end();
 });
 
