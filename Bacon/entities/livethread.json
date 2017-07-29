@@ -1,0 +1,21 @@
+{
+  "id": "d289708e-20a3-4d58-95c7-981c928459fd",
+  "name": "livethread",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "live",
+      "synonyms": [
+        "live"
+      ]
+    },
+    {
+      "value": "thread",
+      "synonyms": [
+        "thread"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

@@ -1,0 +1,39 @@
+{
+  "id": "d5afb92a-4990-4e3d-8f40-6cd4d97802f6",
+  "name": "frontpage",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "frontpage",
+      "synonyms": [
+        "frontpage"
+      ]
+    },
+    {
+      "value": "top",
+      "synonyms": [
+        "top"
+      ]
+    },
+    {
+      "value": "homepage",
+      "synonyms": [
+        "homepage"
+      ]
+    },
+    {
+      "value": "best",
+      "synonyms": [
+        "best"
+      ]
+    },
+    {
+      "value": "popular",
+      "synonyms": [
+        "popular"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

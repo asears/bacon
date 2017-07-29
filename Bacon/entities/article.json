@@ -1,0 +1,15 @@
+{
+  "id": "2a6388e4-538d-467f-81a2-1d7ff66c8fb9",
+  "name": "article",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "article",
+      "synonyms": [
+        "article"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
